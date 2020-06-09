@@ -14,7 +14,7 @@ import org.rspeer.ui.Log;
 
 import java.awt.*;
 
-@ScriptMeta(developer =  "Morgan3553", name = "M-Barbarian Fisher", desc = "Barbarian fisher", version = 0.1)
+@ScriptMeta(developer =  "Morgan3553", name = "M-Barbarian Fisher", desc = "Barbarian fisher", version = 0.2)
 public class Main extends Script implements RenderListener {
 
     private String[] fishNames = new String[]{"Leaping trout", "Leaping salmon", "Leaping sturgeon"};
