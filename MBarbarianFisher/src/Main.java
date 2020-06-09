@@ -14,7 +14,7 @@ import org.rspeer.ui.Log;
 
 import java.awt.*;
 
-@ScriptMeta(developer =  "Morgan3553", name = "M-Barbarian Fisher", desc = "Barbarian fisher", version = 0.2)
+@ScriptMeta(developer =  "Morgan3553", name = "M-Barbarian PowerFisher", desc = "Barbarian powerfisher", version = 0.3)
 public class Main extends Script implements RenderListener {
 
     private String[] fishNames = new String[]{"Leaping trout", "Leaping salmon", "Leaping sturgeon"};
@@ -41,9 +41,17 @@ public class Main extends Script implements RenderListener {
         }else if(Inventory.containsAll("Feather", "Barbarian rod") && !Players.getLocal().isAnimating()) {
             Log.info("Fishing");
             Npc fishingSpot = Npcs.getNearest("Fishing spot");
+            if(fishingSpot == null) { Log.severe("Can't find fishing spot"); ;return -1; } //Check we are in the correct area
             fishingSpot.interact("Use-rod");
             Time.sleepUntil(() -> Players.getLocal().isAnimating(), Random.nextInt(500,750));
+        }else if(!Inventory.contains("Barbarian rod")) {
+            Log.severe("Missing ROD");
+            return -1;
+        }else if(!Inventory.contains("Feather")) {
+            Log.severe("Missing FEATHERS");
+            return -1;
         }
+
         return 400;
     }
 
