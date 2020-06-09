@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MBarbarianFisher/MBarbarianFisher.iml" filepath="$PROJECT_DIR$/MBarbarianFisher/MBarbarianFisher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RSPeer-Public.iml" filepath="$PROJECT_DIR$/RSPeer-Public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SampleScript/SampleScript.iml" filepath="$PROJECT_DIR$/SampleScript/SampleScript.iml" />
+    </modules>
+  </component>
+</project>
