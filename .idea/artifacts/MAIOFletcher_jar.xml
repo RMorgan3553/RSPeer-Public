@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MAIOFletcher:jar">
+    <output-path>$USER_HOME$/Documents/RSPeer/scripts</output-path>
+    <root id="archive" name="MAIOFletcher.jar">
+      <element id="module-output" name="MAIOFletcher" />
+    </root>
+  </artifact>
+</component>
