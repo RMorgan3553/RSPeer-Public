@@ -30,8 +30,8 @@ public class StringTask extends Task {
     public boolean run() {
         //Bug found. Every 5 bows the animation pauses for a second and triggers the canRun() method. Somewhat hacky fix.
         if(Inventory.contains(finishedProduct) && Inventory.getCount(finishedProduct) % 5 == 0) {
-            Time.sleepUntil(() -> !this.canRun(), Random.nextInt(1200,1600));
-            return true;
+            Time.sleepUntil(() -> !this.canRun(), Random.nextInt(2000,2800));
+            if(!this.canRun()) return true;
         }
 
         Inventory.getFirst(bowstring).interact("Use");

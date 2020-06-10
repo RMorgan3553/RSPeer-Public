@@ -3,6 +3,8 @@ import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.Bank;
 import org.rspeer.runetek.api.component.Production;
 import org.rspeer.runetek.api.component.tab.Inventory;
+import org.rspeer.runetek.api.component.tab.Skill;
+import org.rspeer.runetek.api.component.tab.Skills;
 import org.rspeer.runetek.api.input.menu.ActionOpcodes;
 import org.rspeer.runetek.api.scene.Players;
 import org.rspeer.runetek.event.listeners.RenderListener;
@@ -21,9 +23,15 @@ public class Main extends Script implements RenderListener {
     private String resource = "Yew logs";
     private String secondaryResource;
 
+    //Tasks
     private CutTask cutTask;
     private BankTask bankTask;
     private StringTask stringTask;
+
+    //Timers
+    private long startTime;
+    private int startXp;
+
 
     @Override
     public void notify(RenderEvent renderEvent) {
@@ -51,6 +59,9 @@ public class Main extends Script implements RenderListener {
         //cutTask = new CutTask("Yew logs", 2000, 2);
         bankTask = new BankTask("Bow string", 14, "Yew longbow (u)", 14);
         stringTask = new StringTask("Yew longbow (u)", 2000, "Yew longbow");
+
+        startTime = System.currentTimeMillis();
+        startXp = Skills.getExperience(Skill.FLETCHING);
         Log.info("Script started");
     }
 }
