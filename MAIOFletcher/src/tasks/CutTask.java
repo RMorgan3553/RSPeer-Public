@@ -36,7 +36,7 @@ public class CutTask extends Task{
     @Override
     public boolean run() {
         Inventory.getFirst(knife).interact("Use");
-        Time.sleepUntil(() -> Inventory.getSelectedItem().getName().equals(knife), Random.nextInt(750,1000));
+        Time.sleepUntil(() -> Inventory.getSelectedItem() != null && Inventory.getSelectedItem().getName().equals(knife), Random.nextInt(750,1000));
         Inventory.getFirst(resource).interact(ActionOpcodes.ITEM_ON_ITEM);
         Time.sleepUntil(() -> Production.isOpen(), Random.nextInt(750, 1000));
         Production.initiate(this.option);

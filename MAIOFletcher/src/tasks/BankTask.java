@@ -8,10 +8,10 @@ import org.rspeer.ui.Log;
 
 public class BankTask extends Task{
 
-    String item1;
-    String item2;
-    int amount;
-    int amount2;
+    private String item1;
+    private String item2;
+    private int amount;
+    private int amount2;
 
     public BankTask(String item1, int amount, String item2, int amount2) {
         this.item1 = item1;
@@ -32,7 +32,6 @@ public class BankTask extends Task{
             if (Inventory.containsAnyExcept(item1, item2)) {
                 Bank.depositAllExcept(item1, item2);
                 Time.sleepUntil(() -> !Inventory.containsAnyExcept(item1, item2), Random.nextInt(750, 1000));
-
                 if(Inventory.containsAnyExcept(item1,item2)) { return true; }
             }
 
@@ -43,7 +42,7 @@ public class BankTask extends Task{
 
             //Sanity check
             if (neededItems1 >= 28 || neededItems2 >= 28) {
-                Log.info("Bank task req items >= 28. Error");
+                Log.severe("Bank task req items >= 28. Error");
                 return false;
             }
 
@@ -53,6 +52,7 @@ public class BankTask extends Task{
                     //Am unsure why this happens, best guess is latency, so a small static sleep is implemented.
                     Time.sleep(100);
                     if(!Bank.contains(item1)) {
+                        logNotFound(item1);
                         return false;
                     }
                 }
@@ -71,7 +71,8 @@ public class BankTask extends Task{
                     //The Bank.contains method rarely returns false, when it should be true. So we double check here.
                     //Am unsure why this happens, best guess is latency, so a small static sleep is implemented.
                     Time.sleep(100);
-                    if(!Bank.contains(item1)) {
+                    if(!Bank.contains(item2)) {
+                        logNotFound(item2);
                         return false;
                     }
                 }
@@ -97,5 +98,9 @@ public class BankTask extends Task{
     @Override
     public boolean isComplete() {
         return false;
+    }
+
+    private void logNotFound(String item) {
+        Log.severe("Item: " + item + " was not found in Bank/Inventory. Stopping script");
     }
 }
