@@ -14,7 +14,7 @@ import tasks.BankTask;
 import tasks.CutTask;
 import tasks.StringTask;
 
-@ScriptMeta(developer = "Morgan3553", desc = "AIO Fletcher", name = "M ~ AIO Fletcher")
+@ScriptMeta(developer = "Morgan3553", desc = "AIO Fletcher", name = "M ~ AIO Fletcher", version = 0.2)
 public class Main extends Script implements RenderListener {
 
     private String knife = "Knife";
@@ -43,14 +43,14 @@ public class Main extends Script implements RenderListener {
 
         if(stringTask.canRun()) { if(!stringTask.run()) { return -1; }}
         if(bankTask.canRun()) { if(!bankTask.run()) { return -1; }}
-        return Random.nextInt(400,600);
+        return Random.nextInt(750,1000);
     }
 
     @Override
     public void onStart() {
         //cutTask = new CutTask("Yew logs", 2000, 2);
         bankTask = new BankTask("Bow string", 14, "Yew longbow (u)", 14);
-        stringTask = new StringTask("Yew longbow (u)", 2000);
+        stringTask = new StringTask("Yew longbow (u)", 2000, "Yew longbow");
         Log.info("Script started");
     }
 }

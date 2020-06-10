@@ -49,8 +49,12 @@ public class BankTask extends Task{
 
             if (neededItems1 > 0) {
                 if (!Bank.contains(item1)) {
-                    Log.severe("Out of " + item1);
-                    return false;
+                    //The Bank.contains method rarely returns false, when it should be true. So we double check here.
+                    //Am unsure why this happens, best guess is latency, so a small static sleep is implemented.
+                    Time.sleep(100);
+                    if(!Bank.contains(item1)) {
+                        return false;
+                    }
                 }
 
                 int invSlots = Inventory.getFreeSlots();
@@ -64,9 +68,14 @@ public class BankTask extends Task{
 
             if (neededItems2 > 0) {
                 if(!Bank.contains(item2)) {
-                    Log.severe("Out of  " + item2);
-                    return false;
+                    //The Bank.contains method rarely returns false, when it should be true. So we double check here.
+                    //Am unsure why this happens, best guess is latency, so a small static sleep is implemented.
+                    Time.sleep(100);
+                    if(!Bank.contains(item1)) {
+                        return false;
+                    }
                 }
+
                 int invSlots = Inventory.getFreeSlots();
                 if (neededItems2 == invSlots) {
                     Bank.withdrawAll(item2);
