@@ -1,42 +1,49 @@
 package tasks;
 
+import data.string.StringProduct;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.Production;
 import org.rspeer.runetek.api.component.tab.Inventory;
+import org.rspeer.runetek.api.component.tab.Skill;
+import org.rspeer.runetek.api.component.tab.Skills;
 import org.rspeer.runetek.api.input.menu.ActionOpcodes;
 import org.rspeer.runetek.api.scene.Players;
 
 public class StringTask extends Task {
 
-    private String resource;
-    private int amount;
-    private String finishedProduct;
+    private StringProduct product;
+    private int xpRequiredToCompletion;
 
     private String bowstring = "Bow string";
 
-    public StringTask(String resource, int amount, String finishedProduct) {
-        this.resource = resource;
-        this.amount = amount;
-        this.finishedProduct = finishedProduct;
-        setTaskName("Stringing");
+    /**
+     * Strings bows/crossbows.
+     * @param product End product to be made.
+     * @param amount Amount of bows/crossbows to make.
+     */
+    public StringTask(StringProduct product, int amount) {
+        this.product = product;
+        this.xpRequiredToCompletion = (amount * product.getXp()) + Skills.getExperience(Skill.FLETCHING);
+        setTaskName("Stringing " + product.getName());
     }
+
     @Override
     public boolean canRun() {
-        return !Players.getLocal().isAnimating() && Inventory.containsAll(bowstring, resource);
+        return !Players.getLocal().isAnimating() && Inventory.containsAll(bowstring, product.getResource().getName());
     }
 
     @Override
     public boolean run() {
         //Bug found. Every 5 bows the animation pauses for a second and triggers the canRun() method. Somewhat hacky fix.
-        if(Inventory.contains(finishedProduct) && Inventory.getCount(finishedProduct) % 5 == 0) {
+        if(Inventory.contains(product.getName()) && Inventory.getCount(product.getName()) % 5 == 0) {
             Time.sleepUntil(() -> !this.canRun(), Random.nextInt(2000,2800));
             if(!this.canRun()) return true;
         }
 
         Inventory.getFirst(bowstring).interact("Use");
         Time.sleepUntil(() -> Inventory.getSelectedItem() != null && Inventory.getSelectedItem().getName().equals(bowstring), Random.nextInt(750, 1000));
-        Inventory.getFirst(this.resource).interact(ActionOpcodes.ITEM_ON_ITEM);
+        Inventory.getFirst(product.getResource().getName()).interact(ActionOpcodes.ITEM_ON_ITEM);
         Time.sleepUntil(() -> Production.isOpen(), Random.nextInt(750,1000));
         Production.initiate(0);
         Time.sleepUntil(() -> !this.canRun(), Random.nextInt(1250,1500));
@@ -45,6 +52,11 @@ public class StringTask extends Task {
 
     @Override
     public boolean isComplete() {
-        return false;
+        return Skills.getExperience(Skill.FLETCHING) >= xpRequiredToCompletion;
     }
+
+    /**
+     * @return Amount of bows left to string until task completion.
+     */
+    public int getRemaining() { return (Skills.getExperience(Skill.FLETCHING) - xpRequiredToCompletion) / product.getXp(); }
 }

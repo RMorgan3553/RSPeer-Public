@@ -1,58 +1,62 @@
 package tasks;
 
+import data.cut.CutProduct;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
-import org.rspeer.runetek.api.component.Interfaces;
 import org.rspeer.runetek.api.component.Production;
 import org.rspeer.runetek.api.component.tab.Inventory;
+import org.rspeer.runetek.api.component.tab.Skill;
+import org.rspeer.runetek.api.component.tab.Skills;
 import org.rspeer.runetek.api.input.menu.ActionOpcodes;
 import org.rspeer.runetek.api.scene.Players;
 
 public class CutTask extends Task{
 
     private String knife = "Knife";
-    private String resource;
+    private CutProduct product;
+    private int xpRequiredToCompletion;
     private int amount;
-    private int option;
 
     /**
      * Cuts wood into bows/shafts/shields..etc
-     * @param resource Log type to use
+     * @param product What to make
      * @param amount Amount to make
-     * @param option Option to use at the production screen. (0,1,2,3,4..etc)
      */
-    public CutTask(String resource, int amount, int option) {
-        setTaskName("Cutting");
-        this.resource = resource;
+    public CutTask(CutProduct product, int amount) {
+        setTaskName("Cutting" + product.getName());
+        this.product = product;
         this.amount = amount;
-        this.option = option;
     }
 
     @Override
     public boolean canRun() {
-        return !Players.getLocal().isAnimating() && Inventory.containsAll(knife, resource);
+        return !Players.getLocal().isAnimating() && Inventory.containsAll(knife, product.getResourceName());
     }
 
     @Override
     public boolean run() {
+
+        if(!this.hasRun()) {
+            this.xpRequiredToCompletion = (amount * product.getXp()) + Skills.getExperience(Skill.FLETCHING);
+            this.setHasRun();
+        }
+
         Inventory.getFirst(knife).interact("Use");
         Time.sleepUntil(() -> Inventory.getSelectedItem() != null && Inventory.getSelectedItem().getName().equals(knife), Random.nextInt(750,1000));
-        Inventory.getFirst(resource).interact(ActionOpcodes.ITEM_ON_ITEM);
+        Inventory.getFirst(product.getResourceName()).interact(ActionOpcodes.ITEM_ON_ITEM);
         Time.sleepUntil(() -> Production.isOpen(), Random.nextInt(750, 1000));
-        Production.initiate(this.option);
+        Production.initiate(product.getProductionOption());
         Time.sleepUntil(() -> !this.canRun(), Random.nextInt(1250, 1750));
         return true;
     }
 
     /**
-     * @return Amount of actions remanining for this task to be complete.
+     * @return Amount of actions remaining for this task to be complete.
      */
-    public int getRemaining() {
-        return this.amount;
-    }
+    public int getRemaining() {  return (this.xpRequiredToCompletion - Skills.getExperience(Skill.FLETCHING)) / product.getXp(); }
 
     @Override
     public boolean isComplete() {
-        return this.amount <= 0;
+        return Skills.getExperience(Skill.FLETCHING) >= xpRequiredToCompletion && this.hasRun();
     }
 }

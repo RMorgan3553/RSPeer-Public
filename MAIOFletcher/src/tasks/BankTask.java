@@ -13,6 +13,13 @@ public class BankTask extends Task{
     private int amount;
     private int amount2;
 
+    /**
+     * Contains all necessary interaction with the bank including depositing/withdrawing required items.
+     * @param item1 Item to withdraw (i.e unstrung bow or knife)
+     * @param amount Amount of item1 to withdraw
+     * @param item2 Item to withdraw (i.e bowstring or logs)
+     * @param amount2 Amount of item2 to withdraw
+     */
     public BankTask(String item1, int amount, String item2, int amount2) {
         this.item1 = item1;
         this.amount = amount;
@@ -33,6 +40,11 @@ public class BankTask extends Task{
                 Bank.depositAllExcept(item1, item2);
                 Time.sleepUntil(() -> !Inventory.containsAnyExcept(item1, item2), Random.nextInt(750, 1000));
                 if(Inventory.containsAnyExcept(item1,item2)) { return true; }
+            }
+
+            if(!Bank.Tab.MAIN_TAB.isOpen()) {
+                Bank.Tab.MAIN_TAB.open();
+                Time.sleepUntil(() -> Bank.Tab.MAIN_TAB.isOpen(), Random.nextInt(750,1000));
             }
 
             int item1Inv = Inventory.getCount(item1);

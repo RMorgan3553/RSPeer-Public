@@ -7,9 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddca3cf-3d40-43a2-9364-e7ac6c1f964c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIOFletcher/src/data/string/StringProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIOFletcher/src/data/string/StringResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIOFletcher/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAIOFletcher/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAIOFletcher/src/tasks/StringTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/StringTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,71 +33,10 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="272">
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MBarbarianFisher/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CutTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1077#1078#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#865#866#0" expanded="true" />
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/StringTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-              <folding>
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#1834#1835#0" expanded="true" />
-                <element signature="e#1862#1863#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BankTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#2999#3000#0" expanded="true" />
-                <element signature="e#3027#3028#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,20 +75,34 @@
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/Cut.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/StringBow.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/Bank.java" />
-        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/ToolProduct.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/CombinationProduct.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/Resource.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/Tool.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/Product.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/string/StringResource.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutResource.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/StringTask.java" />
-        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskSet.java" />
-        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/string/StringProduct.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutProduct.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/StopTask.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskSet.java" />
+        <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskManager.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1278" />
-    <option name="height" value="758" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="654" />
+    <option name="height" value="767" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -171,6 +132,29 @@
               <item name="RSPeer-Public" type="462c0819:PsiDirectoryNode" />
               <item name="MAIOFletcher" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RSPeer-Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSPeer-Public" type="462c0819:PsiDirectoryNode" />
+              <item name="MAIOFletcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="cut" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RSPeer-Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSPeer-Public" type="462c0819:PsiDirectoryNode" />
+              <item name="MAIOFletcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="string" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RSPeer-Public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSPeer-Public" type="462c0819:PsiDirectoryNode" />
+              <item name="MAIOFletcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -189,8 +173,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,12 +252,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1278" height="758" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32741934" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3260188" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -284,7 +268,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12972085" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13106796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -298,11 +282,158 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12944984" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32741934" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="19" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/StringTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
@@ -317,13 +448,6 @@
     <entry file="file://$PROJECT_DIR$/MBarbarianFisher/src/Tasks/DropTask.java" />
     <entry file="file://$PROJECT_DIR$/MBarbarianFisher/src/Fish.java" />
     <entry file="file://$PROJECT_DIR$/MBarbarianFisher/src/Tasks/FishTask.java" />
-    <entry file="jar://C:/Program Files/AdoptOpenJDK/jdk-11.0.7.10-hotspot/lib/src.zip!/java.base/java/util/function/BooleanSupplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.rspeer/2.24.jar!/org/rspeer/script/Script.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -352,62 +476,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/FletchItems.java">
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/FletchItems.java" />
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/Product.java" />
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/CombinationProduct.java" />
+    <entry file="file://$PROJECT_DIR$/MBarbarianFisher/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="487">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java">
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/Resource.java" />
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/Product.java" />
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/Tool.java" />
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/string/StringResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/AdoptOpenJDK/jdk-11.0.7.10-hotspot/lib/src.zip!/java.base/java/util/function/BooleanSupplier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-          </folding>
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/StringTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="199">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1862#1863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2166#2167#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -418,18 +528,58 @@
           <caret lean-forward="true" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#2999#3000#0" expanded="true" />
-            <element signature="e#3027#3028#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MBarbarianFisher/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/cut/CutProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="56" />
+        <state relative-caret-position="476">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/data/string/StringProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="72" lean-forward="true" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/StopTask.java" />
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/CutTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/tasks/TaskManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -438,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MAIOFletcher/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="272">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
