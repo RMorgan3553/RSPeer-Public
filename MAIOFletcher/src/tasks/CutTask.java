@@ -9,8 +9,9 @@ import org.rspeer.runetek.api.component.tab.Skill;
 import org.rspeer.runetek.api.component.tab.Skills;
 import org.rspeer.runetek.api.input.menu.ActionOpcodes;
 import org.rspeer.runetek.api.scene.Players;
+import tasks.framework.Task;
 
-public class CutTask extends Task{
+public class CutTask extends Task {
 
     private String knife = "Knife";
     private CutProduct product;

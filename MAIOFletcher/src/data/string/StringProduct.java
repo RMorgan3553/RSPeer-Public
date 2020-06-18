@@ -10,8 +10,8 @@ public enum StringProduct {
     WILLOW_LONGBOW("Willow longbow", StringResource.WILLOW_LONGBOW, 41, 40),
     MAPLE_SHORTBOW("Maple shortbow", StringResource.MAPLE_SHORTBOW, 50, 50),
     MAPLE_LONGBOW("Maple longbow", StringResource.MAPLE_LONGBOW, 58,55),
-    YEW_LONGBOW("Yew longbow", StringResource.YEW_LONGBOW, 75, 65),
     YEW_SHORTBOW("Yew shortbow", StringResource.YEW_SHORTBOW, 67,70),
+    YEW_LONGBOW("Yew longbow", StringResource.YEW_LONGBOW, 75, 65),
     MAGIC_SHORTBOW("Magic shortbow", StringResource.MAGIC_SHORTBOW, 83, 80),
     MAGIC_LONGBOW("Magic longbow", StringResource.MAGIC_LONGBOW, 91,85);
 

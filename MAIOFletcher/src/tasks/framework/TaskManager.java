@@ -1,4 +1,4 @@
-package tasks;
+package tasks.framework;
 
 import org.rspeer.runetek.api.movement.Movement;
 import org.rspeer.ui.Log;

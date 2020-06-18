@@ -1,4 +1,7 @@
+import data.ScriptData;
 import data.cut.CutProduct;
+import data.string.StringProduct;
+import gui.GuiMain;
 import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.tab.Skill;
 import org.rspeer.runetek.api.component.tab.Skills;
@@ -8,10 +11,13 @@ import org.rspeer.script.Script;
 import org.rspeer.script.ScriptMeta;
 import org.rspeer.ui.Log;
 import tasks.*;
+import tasks.framework.Task;
+import tasks.framework.TaskManager;
+import tasks.framework.TaskSet;
 
 import java.awt.*;
 
-@ScriptMeta(developer = "Morgan3553", desc = "AIO Fletcher", name = "M ~ AIO Fletcher", version = 0.2)
+@ScriptMeta(developer = ScriptData.scriptDev, desc = ScriptData.scriptDesc, name = ScriptData.scriptName, version = ScriptData.scriptVer)
 public class Main extends Script implements RenderListener {
 
     private TaskManager tManager;
@@ -20,6 +26,8 @@ public class Main extends Script implements RenderListener {
     private long startTime;
     private int startXp;
 
+    private GuiMain gui;
+    private boolean started;
 
     @Override
     public void notify(RenderEvent renderEvent) {
@@ -34,32 +42,27 @@ public class Main extends Script implements RenderListener {
 
         Graphics g = renderEvent.getSource();
         g.setColor(Color.black);
-        g.drawString("Current task: " + this.tManager.getRunningTaskName(), 11, 285);
-        g.drawString("Time: " + time, 11, 300);
-        g.drawString("XP Gained: " + xpGained, 11, 315);
+        if(this.started) {
+            g.drawString("Current task: " + this.tManager.getRunningTaskName(), 11, 285);
+            g.drawString("Time: " + time, 11, 300);
+            g.drawString("XP Gained: " + xpGained, 11, 315);
+        }
     }
 
     @Override
     public int loop() {
-        if(!tManager.run()) return -1;
+        if(this.started && !tManager.run()) return -1;
+
+        if(!this.started) {
+            loadTasks();
+        }
         return Random.nextInt(400,600);
     }
 
     @Override
     public void onStart() {
-
-        CutProduct c = CutProduct.YEW_LONGBOW;
-        CutTask ct = new CutTask(c, 12);
-        BankTask bt = new BankTask("Knife", 1, c.getResourceName(), 27);
-        TaskSet ts = new TaskSet(new Task[]{ct, bt});
-
-        CutProduct c2 = CutProduct.YEW_SHORBTOW;
-        CutTask ct2 = new CutTask(c2, 12);
-        BankTask bt2 = new BankTask("Knife", 1, c2.getResourceName(), 27);
-        TaskSet ts2 = new TaskSet(new Task[]{ct2, bt2});
-
-        this.tManager = new TaskManager(new TaskSet[]{ts, ts2}, true);
-
+        gui = new GuiMain();
+        Log.info("Opened GUI");
         startTime = System.currentTimeMillis();
         startXp = Skills.getExperience(Skill.FLETCHING);
         Log.info("Script started");
@@ -68,5 +71,44 @@ public class Main extends Script implements RenderListener {
     @Override
     public void onStop() {
         Log.info("Script stopped");
+    }
+
+    //Placeholder for command-line/GUI start logic,
+    private void loadTasks() {
+        loadTasksFromGUI();
+    }
+
+    private void loadTasksFromGUI() {
+        if(gui.isStarted()) {
+            Log.info("Checking GUI");
+            String[][] tasks = gui.getTasks();
+            int amountOfTasks = tasks.length;
+            //Sanity check
+            TaskSet[] taskSets = new TaskSet[amountOfTasks];
+            for(int i = 0; i < amountOfTasks; i++ ) {
+                String product = tasks[i][1];
+                int amount = Integer.valueOf(tasks[i][2]);
+                switch (tasks[i][0]) {
+                    case "Cut":
+                        CutProduct cp = CutProduct.valueOf(product);
+                        CutTask ct = new CutTask(cp, amount);
+                        BankTask bct = new BankTask("Knife", 1, cp.getResourceName(), 27);
+                        taskSets[i] = new TaskSet(new Task[]{ct, bct});
+                        break;
+                    case "String":
+                        StringProduct sp = StringProduct.valueOf(product);
+                        StringTask st = new StringTask(sp, amount);
+                        BankTask bst = new BankTask(sp.getResourceName(), 14, "Bow string", 14);
+                        taskSets[i] = new TaskSet(new Task[]{st, bst});
+                }
+            }
+            if(amountOfTasks == 0) {
+                Log.severe("No tasks set!");
+                this.setStopping(true);
+            }else {
+                this.tManager = new TaskManager(taskSets, false);
+                this.started = true;
+            }
+        }
     }
 }

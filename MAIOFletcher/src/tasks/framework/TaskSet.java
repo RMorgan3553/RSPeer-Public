@@ -1,4 +1,6 @@
-package tasks;
+package tasks.framework;
+
+import tasks.framework.Task;
 
 public class TaskSet {
 

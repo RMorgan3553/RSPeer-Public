@@ -9,11 +9,13 @@ import org.rspeer.runetek.api.component.tab.Skill;
 import org.rspeer.runetek.api.component.tab.Skills;
 import org.rspeer.runetek.api.input.menu.ActionOpcodes;
 import org.rspeer.runetek.api.scene.Players;
+import tasks.framework.Task;
 
 public class StringTask extends Task {
 
     private StringProduct product;
     private int xpRequiredToCompletion;
+    private int amount;
 
     private String bowstring = "Bow string";
 
@@ -24,7 +26,7 @@ public class StringTask extends Task {
      */
     public StringTask(StringProduct product, int amount) {
         this.product = product;
-        this.xpRequiredToCompletion = (amount * product.getXp()) + Skills.getExperience(Skill.FLETCHING);
+        this.amount = amount;
         setTaskName("Stringing " + product.getName());
     }
 
@@ -35,6 +37,11 @@ public class StringTask extends Task {
 
     @Override
     public boolean run() {
+        if(!this.hasRun()) {
+            this.xpRequiredToCompletion = (amount * product.getXp()) + Skills.getExperience(Skill.FLETCHING);
+            this.setHasRun();
+        }
+
         //Bug found. Every 5 bows the animation pauses for a second and triggers the canRun() method. Somewhat hacky fix.
         if(Inventory.contains(product.getName()) && Inventory.getCount(product.getName()) % 5 == 0) {
             Time.sleepUntil(() -> !this.canRun(), Random.nextInt(2000,2800));
@@ -52,7 +59,7 @@ public class StringTask extends Task {
 
     @Override
     public boolean isComplete() {
-        return Skills.getExperience(Skill.FLETCHING) >= xpRequiredToCompletion;
+        return Skills.getExperience(Skill.FLETCHING) >= xpRequiredToCompletion && this.hasRun();
     }
 
     /**

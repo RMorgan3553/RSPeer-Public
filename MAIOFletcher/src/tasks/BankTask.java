@@ -5,13 +5,17 @@ import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.Bank;
 import org.rspeer.runetek.api.component.tab.Inventory;
 import org.rspeer.ui.Log;
+import tasks.framework.Task;
 
-public class BankTask extends Task{
+import java.util.List;
+
+public class BankTask extends Task {
 
     private String item1;
     private String item2;
     private int amount;
     private int amount2;
+    private String[] depositExclude;
 
     /**
      * Contains all necessary interaction with the bank including depositing/withdrawing required items.
@@ -19,13 +23,24 @@ public class BankTask extends Task{
      * @param amount Amount of item1 to withdraw
      * @param item2 Item to withdraw (i.e bowstring or logs)
      * @param amount2 Amount of item2 to withdraw
+     * @param depositExclude Items which shouldn't be deposited.
      */
-    public BankTask(String item1, int amount, String item2, int amount2) {
+    public BankTask(String item1, int amount, String item2, int amount2, String[] depositExclude) {
         this.item1 = item1;
         this.amount = amount;
         this.item2 = item2;
         this.amount2 = amount2;
+
+        List<String> de = List.of(depositExclude);
+        de.add(item1);
+        de.add(item2);
+        this.depositExclude = (String[]) de.toArray();
+
         setTaskName("Banking");
+    }
+
+    public BankTask(String item1, int amount, String item2, int amount2) {
+        this(item1, amount, item2, amount2, new String[0]);
     }
 
     @Override
@@ -36,7 +51,7 @@ public class BankTask extends Task{
     @Override
     public boolean run() {
         if(Bank.isOpen()) {
-            if (Inventory.containsAnyExcept(item1, item2)) {
+            if (Inventory.containsAnyExcept(item1, item2) ) {
                 Bank.depositAllExcept(item1, item2);
                 Time.sleepUntil(() -> !Inventory.containsAnyExcept(item1, item2), Random.nextInt(750, 1000));
                 if(Inventory.containsAnyExcept(item1,item2)) { return true; }
