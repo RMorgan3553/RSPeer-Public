@@ -2,6 +2,7 @@ package data.cut;
 
 public enum CutProduct {
 
+    ARROW_SHAFT("Arrow shaft", CutResource.LOG, 0, 5, 1),
     SHORTBOW_U("Shortbow (u)", CutResource.LOG, 1, 5, 5),
     LONGBOW_U("Longbow (u)", CutResource.LOG, 2, 10, 10),
     OAK_SHORTBOW_U("Oak shortbow (u)", CutResource.OAK_LOG, 1, 16, 20),

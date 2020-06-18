@@ -51,10 +51,10 @@ public class BankTask extends Task {
     @Override
     public boolean run() {
         if(Bank.isOpen()) {
-            if (Inventory.containsAnyExcept(item1, item2) ) {
-                Bank.depositAllExcept(item1, item2);
-                Time.sleepUntil(() -> !Inventory.containsAnyExcept(item1, item2), Random.nextInt(750, 1000));
-                if(Inventory.containsAnyExcept(item1,item2)) { return true; }
+            if (Inventory.containsAnyExcept(depositExclude) ) {
+                Bank.depositAllExcept(depositExclude);
+                Time.sleepUntil(() -> !Inventory.containsAnyExcept(depositExclude), Random.nextInt(750, 1000));
+                if(Inventory.containsAnyExcept(depositExclude)) { return true; }
             }
 
             if(!Bank.Tab.MAIN_TAB.isOpen()) {
