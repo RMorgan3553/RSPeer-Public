@@ -31,10 +31,15 @@ public class BankTask extends Task {
         this.item2 = item2;
         this.amount2 = amount2;
 
-        List<String> de = List.of(depositExclude);
-        de.add(item1);
-        de.add(item2);
-        this.depositExclude = (String[]) de.toArray();
+        //TODO: Code cleanup.
+        int a = depositExclude.length;
+        String[] s = new String[a+2];
+        for(int i = 0; i < a; i++) {
+            s[i] = depositExclude[i];
+        }
+        s[a]=item1;
+        s[a+1]=item2;
+        this.depositExclude = s;
 
         setTaskName("Banking");
     }

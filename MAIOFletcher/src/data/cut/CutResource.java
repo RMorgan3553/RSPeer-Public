@@ -7,7 +7,8 @@ public enum CutResource {
     WILLOW_LOG("Willow logs"),
     MAPLE_LOG("Maple logs"),
     YEW_LOG("Yew logs"),
-    MAGIC_LOG("Magic logs");
+    MAGIC_LOG("Magic logs"),
+    REDWOOD_LOG("Redwood logs");
 
     private final String name;
 
