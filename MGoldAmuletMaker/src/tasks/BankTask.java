@@ -4,6 +4,7 @@ import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.Bank;
 import org.rspeer.runetek.api.component.tab.Inventory;
+import org.rspeer.runetek.api.scene.Players;
 import org.rspeer.ui.Log;
 import tasks.framework.Task;
 
@@ -48,7 +49,9 @@ public class BankTask extends Task {
 
     @Override
     public boolean canRun() {
-        return !Inventory.containsAll(item1, item2);
+        return !Inventory.containsAll(item1, item2) &&
+                !Players.getLocal().isAnimating() &&
+                !Players.getLocal().isMoving();
     }
 
     @Override
