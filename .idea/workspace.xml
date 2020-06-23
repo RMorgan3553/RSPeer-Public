@@ -7,16 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddca3cf-3d40-43a2-9364-e7ac6c1f964c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MGoldAmuletMaker_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MGoldAmuletMaker/MGoldAmuletMaker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/data/ScriptData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/BankTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/SmeltTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/framework/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MGoldAmuletMaker/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/SmeltTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/SmeltTask.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +40,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="165">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#448#449#0" expanded="true" />
@@ -59,25 +51,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmeltTask.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SmeltTask.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/SmeltTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="471">
+              <caret line="66" column="82" lean-forward="true" selection-start-line="66" selection-start-column="82" selection-end-line="66" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1935#1936#0" expanded="true" />
                 <element signature="e#1963#1964#0" expanded="true" />
+                <element signature="e#3634#3635#0" expanded="true" />
+                <element signature="e#3689#3690#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BankTask.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BankTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/BankTask.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4710#4711#0" expanded="true" />
@@ -190,9 +184,9 @@
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/BankTask.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/tasks/framework/TaskManager.java" />
         <option value="$PROJECT_DIR$/MAIOFletcher/src/gui/GuiMain.java" />
+        <option value="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/BankTask.java" />
         <option value="$PROJECT_DIR$/MGoldAmuletMaker/src/Main.java" />
         <option value="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/SmeltTask.java" />
-        <option value="$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/BankTask.java" />
       </list>
     </option>
   </component>
@@ -360,7 +354,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -710,10 +703,22 @@
     <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/framework/Task.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/BankTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4710#4711#0" expanded="true" />
+            <element signature="e#4738#4739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#448#449#0" expanded="true" />
@@ -724,24 +729,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/SmeltTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="471">
+          <caret line="66" column="82" lean-forward="true" selection-start-line="66" selection-start-column="82" selection-end-line="66" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1935#1936#0" expanded="true" />
             <element signature="e#1963#1964#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MGoldAmuletMaker/src/tasks/BankTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4710#4711#0" expanded="true" />
-            <element signature="e#4738#4739#0" expanded="true" />
+            <element signature="e#3634#3635#0" expanded="true" />
+            <element signature="e#3689#3690#0" expanded="true" />
           </folding>
         </state>
       </provider>

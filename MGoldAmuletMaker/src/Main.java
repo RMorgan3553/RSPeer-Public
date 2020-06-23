@@ -1,5 +1,6 @@
 import data.ScriptData;
 import org.rspeer.runetek.api.component.Bank;
+import org.rspeer.runetek.api.movement.position.Position;
 import org.rspeer.runetek.event.listeners.RenderListener;
 import org.rspeer.runetek.event.types.RenderEvent;
 import org.rspeer.script.Script;
@@ -23,7 +24,12 @@ public class Main extends Script implements RenderListener {
 
     public Main() {
         bankTask = new BankTask("Amulet mould", 1, "Gold bar", 27);
-        smeltTask = new SmeltTask("Gold bar", 1);
+        smeltTask = new SmeltTask(new Position(3110,3499,0),
+                "Smelt",
+                446,
+                34,
+                "Make",
+                1800);
     }
 
     @Override
