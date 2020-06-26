@@ -33,7 +33,6 @@ public class SceneObjectProductionTask extends Task {
      * @param interfaceGroup The interface group for the production interface.
      * @param interfaceComponent The interface component ID for the production interface
      * @param interfaceInteraction The interaction string for the production interface option (i.e, 'Make/Smith..etc')
-     *                             
      * @param animationTime The animation time of the action (optional) for animations which frequently reset to 0.
      */
     public SceneObjectProductionTask(Position objectPosition, String objectInteraction, int interfaceGroup, int interfaceComponent, String interfaceInteraction, BooleanSupplier runCondition, int animationTime) {

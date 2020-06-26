@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/M-API/M-API.iml" filepath="$PROJECT_DIR$/M-API/M-API.iml" />
       <module fileurl="file://$PROJECT_DIR$/MAIOFletcher/MAIOFletcher.iml" filepath="$PROJECT_DIR$/MAIOFletcher/MAIOFletcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/MBarbarianFisher/MBarbarianFisher.iml" filepath="$PROJECT_DIR$/MBarbarianFisher/MBarbarianFisher.iml" />
       <module fileurl="file://$PROJECT_DIR$/MGoldAmuletMaker/MGoldAmuletMaker.iml" filepath="$PROJECT_DIR$/MGoldAmuletMaker/MGoldAmuletMaker.iml" />
