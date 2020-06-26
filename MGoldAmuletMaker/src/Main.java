@@ -1,14 +1,12 @@
 import data.ScriptData;
-import org.rspeer.runetek.api.component.Bank;
 import org.rspeer.runetek.api.movement.position.Position;
 import org.rspeer.runetek.event.listeners.RenderListener;
 import org.rspeer.runetek.event.types.RenderEvent;
 import org.rspeer.script.Script;
 import org.rspeer.script.ScriptCategory;
 import org.rspeer.script.ScriptMeta;
-import org.rspeer.script.task.Task;
 import tasks.BankTask;
-import tasks.SmeltTask;
+import tasks.SceneObjectProductionTask;
 
 @ScriptMeta(name = ScriptData.name,
         developer = ScriptData.developer,
@@ -20,15 +18,15 @@ public class Main extends Script implements RenderListener {
     private long startTime;
 
     private BankTask bankTask;
-    private SmeltTask smeltTask;
+    private SceneObjectProductionTask smeltTask;
 
     public Main() {
-        bankTask = new BankTask("Amulet mould", 1, "Gold bar", 27);
-        smeltTask = new SmeltTask(new Position(3110,3499,0),
-                "Smelt",
-                446,
-                34,
-                "Make",
+        bankTask = new BankTask("Hammer", 1, "Bronze bar", 27);
+        smeltTask = new SceneObjectProductionTask(new Position(3188,3426,0),
+                "Smith",
+                312,
+                9,
+                "Smith",
                 1800);
     }
 

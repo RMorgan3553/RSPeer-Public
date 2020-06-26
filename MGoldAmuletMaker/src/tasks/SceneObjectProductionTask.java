@@ -10,10 +10,11 @@ import org.rspeer.runetek.api.movement.Movement;
 import org.rspeer.runetek.api.movement.position.Position;
 import org.rspeer.runetek.api.scene.Players;
 import org.rspeer.runetek.api.scene.SceneObjects;
-import org.rspeer.ui.Log;
 import tasks.framework.Task;
 
-public class SmeltTask extends Task {
+import java.util.function.BooleanSupplier;
+
+public class SceneObjectProductionTask extends Task {
 
     private Position objectPosition;
     private String objectInteraction;
@@ -32,9 +33,10 @@ public class SmeltTask extends Task {
      * @param interfaceGroup The interface group for the production interface.
      * @param interfaceComponent The interface component ID for the production interface
      * @param interfaceInteraction The interaction string for the production interface option (i.e, 'Make/Smith..etc')
+     *                             
      * @param animationTime The animation time of the action (optional) for animations which frequently reset to 0.
      */
-    public SmeltTask(Position objectPosition, String objectInteraction, int interfaceGroup, int interfaceComponent, String interfaceInteraction, int animationTime) {
+    public SceneObjectProductionTask(Position objectPosition, String objectInteraction, int interfaceGroup, int interfaceComponent, String interfaceInteraction, BooleanSupplier runCondition, int animationTime) {
         this.objectPosition = objectPosition;
         this.objectInteraction = objectInteraction;
         this.interfaceGroup = interfaceGroup;
@@ -43,7 +45,7 @@ public class SmeltTask extends Task {
         this.animationTime = animationTime;
     }
 
-    public SmeltTask(Position objectPosition, String objectInteraction, int interfaceGroup, int interfaceComponent, String interfaceInteraction) {
+    public SceneObjectProductionTask(Position objectPosition, String objectInteraction, int interfaceGroup, int interfaceComponent, String interfaceInteraction) {
         this(objectPosition, objectInteraction, interfaceGroup, interfaceComponent, interfaceInteraction, 0);
     }
 
@@ -51,15 +53,16 @@ public class SmeltTask extends Task {
     public boolean canRun() {
         return !Players.getLocal().isAnimating() &&
                 !Players.getLocal().isMoving() &&
-                Inventory.containsAll("Amulet mould", "Gold bar");
+                Inventory.containsAll("Hammer", "Bronze bar");
+
     }
 
     @Override
     public boolean run() {
         if(interfaceIsOpen()) {
             getInterface().interact(interfaceInteraction);
-            Time.sleepUntil(() -> !interfaceIsOpen(), Random.nextInt(600,750));
-        }else{
+            Time.sleepUntil(() -> !interfaceIsOpen() && !canRun(), Random.nextInt(600,750));
+        }else {
             SceneObject furnace = SceneObjects.getFirstAt(objectPosition);
             if(furnace != null) {
                 Time.sleepUntil(() -> !canRun(), Random.nextInt(animationTime, animationTime + (animationTime / 10)));
